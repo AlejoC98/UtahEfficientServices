@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
+    <meta name="format-detection" content = "telephone=no">
+    <meta name="description" content="">
+    <meta name="author" content=""> 
+    
+    <!-- Title -->
+    {% if title %}
+        <title>{{title}}</title>
+    {% else %}
+        <title>easy living</title>
+    {% endif %}
+    
+    <!-- favicon icon -->
+    <link rel="icon" href="{{url_for('static', filename = 'images/Logo Options/UEF-Logo.png')}}">
+    
+    <!-- Icons -->
+    <link href="{{url_for('static', filename = 'css/font-awesome.min.css')}}" rel="stylesheet"><!-- font-awesome.min css -->
+    <link href="{{url_for('static', filename = 'css/custom-icons.css')}}" rel="stylesheet"><!-- custom-icons css -->
+    
+    <!-- CSS Stylesheet -->
+    <link href="{{url_for('static', filename = 'css/bootstrap.css')}}" rel="stylesheet"><!-- bootstrap.min css -->
+    <link href="{{url_for('static', filename = 'css/slick.css')}}" rel="stylesheet"><!-- slick css -->
+    <link href="{{url_for('static', filename = 'css/slick-theme.css')}}" rel="stylesheet"><!-- slick-theme css -->
+    <link href="{{url_for('static', filename = 'css/bootstrap-select.css')}}" rel="stylesheet"><!-- bootstrap selectbox css -->
+    
+    <link href="{{url_for('static', filename = 'css/style.css')}}" rel="stylesheet"><!-- style css --> 
+	<link href="{{url_for('static', filename = 'css/css3.css')}}" rel="stylesheet"><!-- css3 css -->
+    <link href="{{url_for('static', filename = 'css/customs.css')}}" rel="stylesheet"><!-- css3 css -->
+	<link href="{{url_for('static', filename = 'css/theme/theme-1.css')}}" rel="stylesheet" id="switch_style"><!-- style css --> 
+</head>
+{# Global macros #}
+{# Call services carrousel macro #}
+{% from '_macro.html.j2' import services_carousel %}
+<body>
+
+    <div id="wrapper" class="{{body_type}}">
+        <!-- Header Start -->
+        <header id="header">
+            <div class="container"> 
+                <div class="row">
+                    <div class="col-lg-4 col-md-3 col-sm-2">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="{{url_for('index')}}">
+                                <img src="{{url_for('static', filename = 'images/Logo Options/Banner UES.png')}}" alt="Logo" class="img-responsive" />
+                            </a>
+                            <button type="button" class="navbar-toggle">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button> 
+                        </div> 
+                    </div>
+                    <div class="col-lg-8 col-md-9 col-sm-10">
+                        <div class="right-header clearfix">
+                            <nav class="navigation">
+                                <div class="close-menu"><i class="fa fa-close" aria-hidden="true"></i></div>
+                                <div class="navbar-collapse">
+                                    <ul class="nav navbar-nav">
+                                        <li id="home_button"><a href="{{url_for('index')}}">Home</a></li>
+                                        <li id="about_button"><a href="{{url_for('about')}}">About Us</a></li>
+                                        <li id="service_button"><a href="{{url_for('gallery')}}">Our Services</a></li>
+                                        {# <li><a href="{{url_for('faq')}}">FAQ’s</a></li> #}
+                                        {# <li><a href="#">Pages <em class="fa fa-angle-down" aria-hidden="true"></em></a>
+                                            <ul class="dropdown-menu"> 
+                                                <li><a href="{{url_for('team')}}">Our Team V1</a></li>
+                                                <li><a href="{{url_for('team-2')}}">Our Team V2</a></li>
+                                                <li><a href="{{url_for('team-member')}}">Team Member</a></li>
+                                                <li><a href="{{url_for('my-dashboard')}}">My Dashboard</a></li>
+                                                <li><a href="{{url_for('order-status')}}">My Orders</a></li>
+                                                <li><a href="{{url_for('404-page')}}">404 Page</a></li>
+                                                <li><a href="{{url_for('coming-soon')}}">Comingsoon</a></li>
+                                                <li><a href="{{url_for('service-1')}}">Book Service</a> </li>
+                                            </ul> 
+                                        </li> #}
+                                        <li id="contact_button"><a href="{{url_for('contact')}}">Contact Us</a></li> 
+                                    </ul>
+                                </div>
+                            </nav>
+                            {# <div class="register-link">
+                                <a href="#" data-toggle="modal" data-target="#myModal" id="myModalLabel"><em class="fa fa-user" aria-hidden="true"></em>LogIn/Register</a>
+                            </div>   #}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% block page_banner %}
+            
+        {% endblock %}
+        <div id="content">            
+        	{% block content %}
+        	{% endblock %}
+        </div>
+        <footer id="footer">
+            <div class="top-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <h3>Quick Links</h3>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <ul class="links">
+                                        <li><a href="{{url_for('index')}}">Home</a></li>
+                                        <li><a href="{{url_for('about')}}">About</a></li>
+                                        <li><a href="{{url_for('gallery')}}">Our Services</a></li>
+                                        {# <li><a href="#">Blog</a></li>
+                                        <li><a href="#">For Corporates</a></li>
+                                        <li><a href="#">Careers</a></li> #}
+                                        {# <li><a href="{{url_for('gallery')}}">Contact</a></li> #}
+                                    </ul>
+                                </div>
+                                {# <div class="col-xs-6">
+                                    <ul class="links">
+                                        <li><a href="#">Terms of Service</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Unsubscribe</a></li>
+                                        <li><a href="#">Download Apps</a></li>
+                                        <li><a href="#">Partner With Us</a></li>
+                                    </ul>
+                                </div> #}
+                            </div>
+                        </div> 
+                        <div class="col-md-4 col-sm-6">
+                            <h3>Our Services</h3>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <ul class="links">
+                                        <li><a href="#">Electrical</a></li>
+                                        <li><a href="#">Plumbing</a></li>
+                                        <li><a href="#">Welding</a></li>
+                                        <li><a href="#">Carpentry</a></li>
+                                        <li><a href="#">Painting</a></li>
+                                        <li><a href="#">Roofing</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-6">
+                                    <ul class="links">
+                                        <li><a href="#">Flooring</a></li>
+                                        <li><a href="#">Windows</a></li>
+                                        <li><a href="#">Locksmith</a></li>
+                                        {# <li><a href="#">Home Security</a></li>
+                                        <li><a href="#">Computer Repair</a></li> #}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <h3>Follow us</h3>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                            {# <div class="contact-us">
+                                <input type="email" placeholder="Enter email address" />
+                                <input type="submit" class="btn btn-primary" value="Submit" />
+                            </div> #}
+                            <ul class="list-inline social-links">
+                                <li><a href="#"><i aria-hidden="true" class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i aria-hidden="true" class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i aria-hidden="true" class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i aria-hidden="true" class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i aria-hidden="true" class="fa fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="quick-links">
+                        <ul class="list-inline">
+                            <li><a href="{{url_for('about')}}">About us</a></li>
+                            {# <li><a href="#">Privacy</a></li> #}
+                            {# <li><a href="faq.html">FAQ</a></li> #}
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+                            {# <li><a href="blog.html">Blog</a></li> #}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">Copyright © 2019-2020 High Tech Solutions. All Rights Reserved.</div>
+            </div>
+        </footer>
+    </div>
+    <script src="{{url_for('static', filename = 'js/jquery.min.js')}}"></script><!-- jquery-1.12.4.min js-->    
+    <script src="{{url_for('static', filename = 'js/jquery.validate.min.js')}}"></script><!-- jquery-1.12.4.min js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>  
+    <script src="{{url_for('static', filename = 'js/bootstrap.min.js')}}"></script><!-- bootstrap.min js-->
+    <script src="{{url_for('static', filename = 'js/slick.min.js')}}"></script><!-- slick js-->
+    <script src="{{url_for('static', filename = 'js/bootstrap-select.min.js')}}"></script><!-- Bootstrap selectbox js-->
+    <script src="{{url_for('static', filename = 'js/custom.js')}}"></script><!-- custom js--> 
+    {# <script type="text/javascript" src="{{url_for('static', filename = 'js/jquery-1.6.1.min.js')}}"></script> #}
+    <script src="{{url_for('static', filename = 'js/jquery.dd.js')}}"></script><!-- selectbox js-->
+    <script src="{{url_for('static', filename = 'js/functions.js')}}"></script><!-- selectbox js-->
+    <script src="{{url_for('static', filename = 'js/custom_functions.js')}}"></script><!-- selectbox js-->
+</body>
+</html>

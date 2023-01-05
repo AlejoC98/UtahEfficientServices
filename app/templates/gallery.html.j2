@@ -1,0 +1,29 @@
+{% extends "base.html.j2" %}
+
+{% block content %}
+	<div id="content">
+		<div class="container" id="gallery">
+			<div class="big-demo go-wide" data-js="filtering-demo">
+				<div class="filter-button-group button-group js-radio-button-group">
+                    <button class="button is-checked" data-filter="*">show all</button>
+                    <button class="button" data-filter=".electrical">Electrical</button>
+                    <button class="button" data-filter=".plumbing">Plumbing</button>
+                    <button class="button" data-filter=".pestcontrol">Pest Control</button>
+                    <button class="button" data-filter=".painting">Painting</button>
+                    <button class="button" data-filter=".cleaning">Cleaning</button>
+                    <button class="button" data-filter=".appliance">Appliances</button>
+                    <button class="button" data-filter=".carpentry">Carpentry</button>
+                    <button class="button" data-filter=".computer-repair">Computer Repair</button>
+                    <button class="button" data-filter=".home-security">Home Security</button>
+                    <button class="button" data-filter=".geyser">Geyser</button>
+                    <button class="button" data-filter=".vehicle-care">Vehicle Care</button>
+                    <button class="button" data-filter=".spa">Spa</button>
+                    
+                </div>
+                <div class="grid" id="gallery_grid">
+
+                </div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

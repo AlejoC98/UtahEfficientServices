@@ -1,0 +1,193 @@
+{% extends "base.html.j2" %}
+
+{% block content %}
+	<!-- Banner Section --> 
+        <section id="banner" class="banner-slider">
+			<div class="banner-img-slider">
+                <!--<div id="slide-video">
+                    <video autoplay loop width="900px" controls>
+                        <source src="assets/video/Video.mp4" />
+                    </video>
+                </div>
+                <div id="slide-video">
+                    <video autoplay loop width="900px" controls>
+                        <source src="assets/video/Video.mp4" />
+                    </video>
+                </div>-->
+                <div>
+					<div class="banner-thumb"><img src="{{url_for('static', filename = 'images/banner-img/banner-img-1.png')}}" alt="" class="hide" /></div>
+				</div>
+                <div>
+					<div class="banner-thumb"><img src="{{url_for('static', filename = 'images/banner-img/banner-img-2.png')}}" alt="" class="hide" /></div>
+				</div>
+                <div>
+                    <div class="banner-thumb"><img src="{{url_for('static', filename = 'images/banner-img/banner-img-3.png')}}" alt="" class="hide" /></div>
+                </div>
+                <div>
+                    <div class="banner-thumb"><img src="{{url_for('static', filename = 'images/banner-img/banner-img-4.png')}}" alt="" class="hide" /></div>
+                </div>
+			</div>
+			<div class="blue-overlay"></div>
+			<div class="banner-text-wrapper">
+                <div class="container">
+                    <div class="banner-text">
+                        <div class="row">
+                        	<div class="col-lg-6 col-lg-offset-3 col-md-offset-2 col-md-8">
+                            	<h1>Make Life Easy</h1>
+                        		<div class="search-wrapper">
+                                	<div class="row">
+                                    	<div class="col-sm-4">
+                                        	<select class="selectcity">
+                                                <option title="fa fa-paper-plane-o">Select City</option>
+                                                <option>Salt Lake City</option>
+                                                <option>Sandy</option>
+                                                <option>West Valley City</option>
+                                                <option>West Jordan</option>
+                                                <option>South Jordan</option>
+                                                <option>Murray</option>
+                                                <option>Midvale</option>
+                                                <option>Taylorsville</option>
+                                                <option>South Salt Lake</option>
+                                                <option>Riverton</option>
+                                                <option>Cottonwood Heights</option>
+                                                <option>Hollyday</option>
+                                                <option>Milcreek</option>
+                                                <option>Herriman</option>
+                                                <option>Kearns</option>
+                                                <option>Magna</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-8">
+                                        	<div class="service-list">
+                                                <form name="myform" id="myform"  action="getvalue.php" enctype="multipart/form-data" method="post">
+                                                    <select class="mydds" name="myimge">
+                                                        <option value="" selected="selected" title="">What service do you need?</option>
+                                                        <option value="electrical" title="iconmoon iconmoon-plug" class="service1">Electrical</option>
+                                                        <option value="plumber" title="iconmoon iconmoon-tap">Plumbing</option>                                                        
+                                                        <option value="geyser" title="iconmoon iconmoon-welder">Welding</option>
+                                                        <option value="carpentry" title="iconmoon iconmoon-drill">Carpentry</option>
+                                                        <option value="painting" title="iconmoon iconmoon-paint">Painting</option>
+                                                        <option value="pestcontrol" title="iconmoon iconmoon-roof">Roofing</option>
+                                                        <option value="computerrepair" title="iconmoon iconmoon-parquet">Flooring</option>
+                                                        <option value="cleaning" title="iconmoon iconmoon-window">Windows</option>
+                                                        <option value="appliances" title="iconmoon iconmoon-door">Locksmith</option>
+                                                        <option value="vehiclecare" title="iconmoon iconmoon-car-service">Vehicle Care</option>
+                                                    </select>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</section>
+		 <!-- Content Start -->
+        <div id="content">
+            <!-- Our services Section -->
+        	{{ services_carousel() }}
+            <!-- Service Provider Section --> 
+            <section id="service-provider">
+                <div class="row-height">
+                    <div class="col-lg-4 col-sm-height">
+                        <div class="inside-full-height left-part">
+                            <h2>largest home Service Provider</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-sm-height right-part">
+                        <div class="inside-full-height">
+                            <div class="row">
+                                <div class="col-lg-5 col-sm-6">
+                                    <div class="row-height">
+                                        <div class="col-sm-height icon"><span><i class="fa fa-support" aria-hidden="true"></i></span></div>
+                                        <div class="col-sm-height support">
+                                            <span class="time">24/7</span>
+                                            <span class="text">online<br>support</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-sm-6">
+                                    <div class="row-height">
+                                        <div class="col-sm-height icon"><span><i class="fa fa-comment" aria-hidden="true"></i></span></div>
+                                        <div class="col-sm-height call-us">
+                                            <span class="text">Text us toll free:</span>
+                                            <span class="num">385 482 9293</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- How it works Section -->
+            <section id="how-works" class="section-block">
+            	<div class="container">
+                	<div class="top-desc">
+                        <h2>How it works</h2>
+                        <p class="sub-heading">You’re in the right place!</p>
+                    </div>
+                    <div class="row">
+                    	<div class="col-md-3 col-sm-6">
+                        	<div class="icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                        	<div class="name">Browse Services</div>
+                            <p>Look for the service that best fit your needs in our Wide catalog of options. </p> 
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                        	<div class="icon"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></div>
+                        	<div class="name">Schedule Service</div>
+                            <p>Choose the date and time of your service according to your time availability. </p>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                        	<div class="icon"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
+                        	<div class="name">Book Service</div>
+                            <p>Book your service with one of our professionals. </p>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                        	<div class="icon"><i class="fa fa-gear" aria-hidden="true"></i></div>
+                        	<div class="name">Resolves Issues</div>
+                            <p>Solve your problems satisfactorily. </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Exceptional Quality Section -->
+            <section id="exceptional-quality" class="section-block">
+            	<div class="blue-overlay"></div>
+               	<div class="container">
+                    <div class="h1">Exceptional quality</div>
+                    <div class="h1">Make Life Easy</div>
+                    <a href="#" class="btn btn-info">Read More</a> 
+                </div>
+            </section>
+            <!-- Our services Section -->
+            <section id="our-services" class="section-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="icon-box"><i class="icon icon-verifiedprofessionals" aria-hidden="true"></i></div>
+                            <div class="name">Verified Professionals</div>
+                            <p>All our team's menbers are prefesional verified.</p>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="icon-box"><i class="icon icon-insuredwork" aria-hidden="true"></i></div>
+                            <div class="name">Insured Work</div>
+                            <p>We assure you the complete completion of your work professionally.</p>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="icon-box"><i class="icon icon-satisfactionguaranteed" aria-hidden="true"></i></div>
+                            <div class="name">Satisfaction Guaranteed</div>
+                            <p>100 percent guaranteed satisfaction of our work and our staff..</p>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="icon-box"><i class="icon icon-easypayment" aria-hidden="true"></i></div>
+                            <div class="name">Easy Payment</div>
+                            <p>We offer you a wide variety of payment methods according to your needs..</p>
+                        </div>
+                    </div>
+                </div>
+            </section>          
+        </div>
+{% endblock %}

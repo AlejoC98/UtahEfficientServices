@@ -1,0 +1,66 @@
+{% macro services_carousel() %}
+<section id="services" class="section-block">
+    <div class="container">
+        <div class="top-desc text-center">
+            <h2>our Services</h2>
+            <p class="sub-heading">You’re in the right place!</p>
+        </div>
+        <div class="service-slider">
+            <div class="col-md-3 col-sm-6">
+                <a href="gallery.html">
+                    <div class="img"><img src="{{url_for('static', filename = 'images/service-img/electrical-services-banner.png')}}" alt="" /></div>
+                    <span class="name">Electrical</span>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="gallery.html">
+                    <div class="img"><img src="{{url_for('static', filename = 'images/service-img/plumbing-services-banner.png')}}" alt="" /></div>
+                    <span class="name">Plumbing</span>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="gallery.html">
+                    <div class="img"><img src="{{url_for('static', filename = 'images/service-img/welding-services-banner.png')}}" alt="" /></div>
+                    <span class="name">Welding</span>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="gallery.html">
+                    <div class="img"><img src="{{url_for('static', filename = 'images/service-img/carpentry-services-banner.png')}}" alt="" /></div>
+                    <span class="name">Carpentry</span>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="gallery.html">
+                    <div class="img"><img src="{{url_for('static', filename = 'images/service-img/painting-services-banner.png')}}" alt="" /></div>
+                    <span class="name">Painting</span>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="gallery.html">
+                    <div class="img"><img src="{{url_for('static', filename = 'images/service-img/roofing-services-banner.png')}}" alt="" /></div>
+                    <span class="name">Roofing</span>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="gallery.html">
+                    <div class="img"><img src="{{url_for('static', filename = 'images/service-img/flooring-services-banner.png')}}" alt="" /></div>
+                    <span class="name">Flooring</span>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="gallery.html">
+                    <div class="img"><img src="{{url_for('static', filename = 'images/service-img/windows-services-banner.png')}}" alt="" /></div>
+                    <span class="name">Windows</span>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <a href="gallery.html">
+                    <div class="img"><img src="{{url_for('static', filename = 'images/service-img/locksmith-services-banner.png')}}" alt="" /></div>
+                    <span class="name">Locksmith</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endmacro %}
